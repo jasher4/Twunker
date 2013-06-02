@@ -33,6 +33,16 @@
 			padding-top:30px;
 		}
 	</style>
+	<script>
+		function submittedInfo() {
+			if (frm1.username.value == null || frm1.pwd.value == null || frm1.username.value.indexOf("@") == -1) {
+				document.getElementById("badInfo").innerHTML = "Invalid input";
+			}
+			else {
+				document.getElementById("badInfO").innerHTML = "";
+			}
+		}
+	</script>
 </head>
 <body>
 	<center>
@@ -41,15 +51,30 @@
 			<h1>Welcome to Twunker!</h1>
 		</div>
 		<div class="body">
-			<form>
-				Username: <input type="text" name="username"><br>
-				Password: <input type="password" name="pwd"><br>
-				<input type="submit" value="Submit">
+			<form id="frm1">
+				<table>
+					<tr>
+						<td align="right">Username</td>
+						<td align="left"><input type="text" name="username"></td>
+					</tr>
+					<tr>
+						<td align="right">Password</td>
+						<td align="left"><input type="password" name="pwd"></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="right">
+							<input type="button" value="Login" onClick="submittedInfo();">
+						</td>
+					</tr>
+				</table>
 			</form>
+			<div id="badInfo" class="incorrect">
+			</div>
 		</div>
 		<div class="newUser">
 			<a href="newAccountPage.html">Create new account</a>
 		</div>
 	</div>
+	</center>
 </body>
 </html>
