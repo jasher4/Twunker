@@ -32,14 +32,20 @@
 			text-align:center;
 			padding-top:30px;
 		}
+		.incorrect {
+			color:red;
+		}
 	</style>
 	<script>
 		function submittedInfo() {
-			if (frm1.username.value == null || frm1.pwd.value == null || frm1.username.value.indexOf("@") == -1) {
+			if (frm1.username.value.length == 0 || 
+				frm1.pwd.value.length == 0 || 
+				frm1.username.value.indexOf("@")==-1 ||
+				frm1.username.value.indexOf(".")==-1 ||
+				frm1.username.value.indexOf("@") > frm1.username.value.indexOf(".")) {
 				document.getElementById("badInfo").innerHTML = "Invalid input";
-			}
-			else {
-				document.getElementById("badInfO").innerHTML = "";
+			} else {
+				document.getElementById("badInfo").innerHTML = "";
 			}
 		}
 	</script>

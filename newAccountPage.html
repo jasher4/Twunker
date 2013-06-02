@@ -38,7 +38,19 @@
 	</style>
 	<script>
 		function submittedInfo() {
-			if (frm1.firstname.value == null || frm1.lastname.value == null|| frm1.email1.value == null || frm1.email2.value == null || frm1.pwd.value == null || frm1.email1.value.indexOf("@")==-1 || frm1.email2.value.indexOf("@")==-1) {
+			if (frm1.firstname.value.length == 0 || 
+				frm1.lastname.value.length == 0|| 
+				frm1.email1.value.length == 0 || 
+				frm1.email2.value.length == 0 || 
+				frm1.pwd.value.length == 0 || 
+				frm1.email1.value.indexOf("@")==-1 || 
+				frm1.email2.value.indexOf("@")==-1 || 
+				frm1.email1.value.indexOf(frm1.email2.value) != 0 || 
+				frm1.email2.value.indexOf(frm1.email1.value) != 0 || 
+				frm1.email1.value.indexOf(".")==-1 || 
+				frm1.email2.value.indexOf(".")==-1 || 
+				frm1.email1.value.indexOf("@") > frm1.email1.value.indexOf(".") ||
+				frm1.email2.value.indexOf("@") > frm1.email2.value.indexOf(".")) {
 				document.getElementById("badInfo").innerHTML="Invalid input";
 			} else {
 				document.getElementById("badInfo").innerHTML="";
