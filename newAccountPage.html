@@ -25,6 +25,12 @@
 		a:hover {
 			color:black;
 		}
+		.login {
+   			right:5px;
+    		top:-150px;
+    		text-align:right;
+    		position:relative;
+  		}
 	</style>
 </head>
 <body>
@@ -32,6 +38,9 @@
 	<div style="width:960px;">
 		<div class = "header">
 			<h1>Create new account</h1>
+			 <div class="login">
+      			<a href="loginPage.html">Back to login page? </a>
+    		 </div>
 		</div>
 		<div class = "body">
 			<form>
@@ -55,6 +64,11 @@
 					<tr>
 						<td align="right"> Password:</td>
 						<td align="left"><input type="password" name="pwd"></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input type="submit" value="Submit">
+						</td>
 					</tr>
 				</table>
 			</form>
