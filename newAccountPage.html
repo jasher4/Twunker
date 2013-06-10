@@ -4,25 +4,19 @@
 	<link type="text/css" rel="stylesheet" href="loggedOutStyleSheet.css"/>
 	<title>Twunker account page</title>
 	<script>
-		function submittedInfo() {
-			if (frm1.firstname.value.length == 0 || 
-				frm1.lastname.value.length == 0|| 
-				frm1.email1.value.length == 0 || 
-				frm1.email2.value.length == 0 || 
-				frm1.pwd.value.length == 0 || 
-				frm1.email1.value.indexOf("@")==-1 || 
-				frm1.email2.value.indexOf("@")==-1 || 
-				frm1.email1.value.indexOf(frm1.email2.value) != 0 || 
-				frm1.email2.value.indexOf(frm1.email1.value) != 0 || 
-				frm1.email1.value.indexOf(".")==-1 || 
-				frm1.email2.value.indexOf(".")==-1 || 
-				frm1.email1.value.indexOf("@") > frm1.email1.value.indexOf(".") ||
-				frm1.email2.value.indexOf("@") > frm1.email2.value.indexOf(".")) {
+		/*function submittedInfo() {
+			if (firstname.value.length == 0 || 
+				lastname.value.length == 0|| 
+				email.value.length == 0 || 
+				pwd.value.length == 0 || 
+				emai.value.indexOf("@")==-1 || 
+				email.value.indexOf(".")==-1 || 
+				email.value.indexOf("@") > email.value.indexOf(".")) {
 				document.getElementById("badInfo").innerHTML="Invalid input";
 			} else {
 				document.getElementById("badInfo").innerHTML="";
 			}
-		}
+		}*/
 	</script>
 </head>
 <body>
@@ -35,35 +29,19 @@
     		 </div>
 		</div>
 		<div class = "body">
-			<form id = "frm1">
-				<table>
-					<tr>
-						<td align="right"> First name:</td>
-						<td align="left"><input type="text" name="firstname"></td>
-					</tr>
-					<tr>
-						<td align="right"> Last name:</td> 
-						<td align="left"><input type="text" name="lastname"></td>
-					</tr>
-					<tr>
-						<td align="right"> Email:</td>
-						<td align="left"><input type="text" name="email1"></td>
-					</tr>
-					<tr>
-						<td align="right"> Reenter email:</td>
-						<td align="left"><input type="text" name="email2"></td>
-					</tr>
-					<tr>
-						<td align="right"> Password:</td>
-						<td align="left"><input type="password" name="pwd"></td>
-					</tr>
-					<tr>
-						<td colspan="2" align="center">
-							<input type="button" value="Submit" onClick="submittedInfo();">
-						</td>
-					</tr>
-				</table>
-			</form>
+			<div class="input"> 
+				<div align="left">First name:</div>
+				<div> <input type="text" name"firstname" align="left"> </div>
+				<div align="left">Last name:</div>
+				<div> <input type="text" name="lastname" align="right"> </div>
+				<div align="left">Email:</div>
+				<div> <input type="text" name="email" align="right"> </div>
+				<div align="left">Username:</div>
+				<div><input type="text" name="username" align="right"></div>
+				<div align="left">Password:</div>
+				<div><input type="text" name="password" align="right"></div>
+				<div><input type="button" value="Submit" onClick="submittedInfo();">
+			</div>
 		</div>
 		<div id="badInfo" class="incorrect">
 		</div>

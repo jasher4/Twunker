@@ -21,7 +21,7 @@ h1 {
     padding-top:20px;
     font-size:18px;
     border-right:2px solid #BBB;
-    height:400px;
+    height:732px;
     width:200px;
     float:left;
   }
@@ -41,4 +41,19 @@ h1 {
     font-weight:bold;
     text-align:center;
     font-size:40px;
+  }
+
+  .twunks {
+    padding-top:50px;
+    text-align:left;
+    font-size:30px;
+    float:center;
+    height:400px;
+    position:relative;
+  }
+
+  .twunk {
+    font-size:25px;
+    padding:50px;
+    color:black;
   }

@@ -4,7 +4,7 @@
 	<link type="text/css" rel="stylesheet" href="loggedOutStyleSheet.css"/>
 	<title>Twunker login page</title>
 	<script>
-		function submittedInfo() {
+		/*function submittedInfo() {
 			if (frm1.username.value.length == 0 || 
 				frm1.pwd.value.length == 0 || 
 				frm1.username.value.indexOf("@")==-1 ||
@@ -14,7 +14,7 @@
 			} else {
 				document.getElementById("badInfo").innerHTML = "";
 			}
-		}
+		}*/
 	</script>
 </head>
 <body>
@@ -24,23 +24,13 @@
 			<h1>Welcome to Twunker!</h1>
 		</div>
 		<div class="body">
-			<form id="frm1">
-				<table>
-					<tr>
-						<td align="right">Username</td>
-						<td align="left"><input type="text" name="username"></td>
-					</tr>
-					<tr>
-						<td align="right">Password</td>
-						<td align="left"><input type="password" name="pwd"></td>
-					</tr>
-					<tr>
-						<td colspan="2" align="right">
-							<input type="button" value="Login" onClick="submittedInfo();">
-						</td>
-					</tr>
-				</table>
-			</form>
+			<div class = "input">
+				<div align = "left">Username</div>
+				<div> <input type="text" name="username"></div>
+				<div align = "left">Password</div>
+				<div> <input type="text" name="password"></div>
+				<div> <input type="button" align = "center" value="Login" onClick="submittedInfo();"></div>
+			</div>
 			<div id="badInfo" class="incorrect">
 			</div>
 		</div>
